@@ -1,14 +1,11 @@
 terraform {
   required_providers {
     http = {
-      source = "hashicorp/http"
+      source  = "hashicorp/http"
       version = "~> 3"
     }
   }
 }
-
-provider "http" {}
-
 
 data "http" "my_api_token_map" {
   url = "https://api.cyberjake.xyz/cloudflare_api/token_permissions"
