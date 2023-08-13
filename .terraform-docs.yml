@@ -1,0 +1,20 @@
+formatter: markdown table
+
+header-from: main.tf
+
+
+output:
+  file: "README.md"
+  mode: replace
+  template: |-
+    # terraform-cloudflare-api-permissions
+
+    This is a simple terraform module that get all the possible permissions for a Cloudflare API token.
+    Can use as a replacement for `cloudflare_api_token_permission_groups` data source. There is an extra permission set of `r2` which is not available in the data source.
+    <!-- BEGIN_TF_DOCS -->
+    {{ .Content }}
+    <!-- END_TF_DOCS -->
+
+
+settings:
+  lockfile: false
